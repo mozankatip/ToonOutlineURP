@@ -3,11 +3,12 @@ Shader "mozan/Outline"
     Properties
     {
         _MainTex ("Texture", 2D) = "white" {}   // Texture property for the main texture
+        _Color ("Object Color", Color) = (1, 1, 1, 1)   // Color property for the object color
         [Space(20)]
         _OutColor ("Outline Color", Color) = (0, 0, 0, 1)   // Color property for the outline color
        
         [Space(10)]
-        _OutThickness ("Outline Thickness", Range(0.0, 1.0)) = 0.1   // Range property for the outline thickness
+        _OutThickness ("Outline Thickness", Range(0.0, 0.2)) = 0.1   // Range property for the outline thickness
         _OutFade ("Outline Fade", Range(0.0, 1.0)) = 1.0   // Range property for the outline fade
        
         [Space(10)]
@@ -78,20 +79,8 @@ Shader "mozan/Outline"
             // Fragment shader for the outline pass
             fixed4 frag(v2f i) : SV_Target
             {
-                fixed4 col = tex2D(_MainTex, i.uv);
-
-                // Calculate the distance from the fragment to the mesh surface
-                float distanceToSurface = length(i.vertex.xyz);
-
-                // Calculate the falloff based on the distance
-                //float falloff = saturate((_OutThickness - distanceToSurface) / (_OutThickness));
-
                 // Calculate the outline color with fade
                 fixed4 outlineColor = float4(_OutColor.rgb, _OutColor.a * _OutFade);
-
-                // Apply the falloff to interpolate between the outline color and the base texture color
-                //fixed4 finalColor = lerp(outlineColor, col, falloff);
-
                 return outlineColor;
             }
             ENDCG
@@ -131,6 +120,8 @@ Shader "mozan/Outline"
 
             sampler2D _MainTex;
             float4 _MainTex_ST;
+            float4 _Color;
+
 
             // Vertex shader for the texture pass
             v2f vert(appdata v)
@@ -145,6 +136,9 @@ Shader "mozan/Outline"
             fixed4 frag(v2f i) : SV_Target
             {
                 fixed4 col = tex2D(_MainTex, i.uv);
+
+                // Multiply the texture with the object color.
+                col *= _Color;
                 return col;
             }
             ENDCG
