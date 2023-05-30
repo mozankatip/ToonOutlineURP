@@ -3,6 +3,8 @@ Shader "mozan/Outline"
     Properties
     {
         _MainTex ("Texture", 2D) = "white" {}   // Texture property for the main texture
+        [Space(20)]
+
         _Color ("Object Color", Color) = (1, 1, 1, 1)   // Color property for the object color
         [Space(20)]
         _OutColor ("Outline Color", Color) = (0, 0, 0, 1)   // Color property for the outline color

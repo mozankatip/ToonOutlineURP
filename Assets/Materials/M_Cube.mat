@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_Outline
+  m_Name: M_Cube
   m_Shader: {fileID: 4800000, guid: ced0ae7e1b2b02241ba217dbae730fab, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -27,7 +27,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _OutFade: 1
-    - _OutThickness: 0.086
+    - _OutThickness: 0.038
     - _ZTest: 4
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
