@@ -1,20 +1,13 @@
-Shader "Mert/Outline"
+Shader "mozan/Outline"
 {
     Properties
     {
         _MainTex ("Texture", 2D) = "white" {}   // Texture property for the main texture
-       
         [Space(20)]
         _OutColor ("Outline Color", Color) = (0, 0, 0, 1)   // Color property for the outline color
        
         [Space(10)]
-        _OutThickness ("Outline Thickness", Range(0.0, 0.2)) = 0.1   // Range property for the outline thickness
-
-        //---I worked a lot on the falloff property, however, I cannot achieve desired functionality. I choose to comment out this line
-        //---instead of deleting. On the fragment shader part, you can still see one of my tries to use it.
-        
-        //_OutFalloff ("Outline Falloff", Range(0.0, 1.0)) = 0.5   // Range property for the outline falloff
-
+        _OutThickness ("Outline Thickness", Range(0.0, 1.0)) = 0.1   // Range property for the outline thickness
         _OutFade ("Outline Fade", Range(0.0, 1.0)) = 1.0   // Range property for the outline fade
        
         [Space(10)]
@@ -64,7 +57,6 @@ Shader "Mert/Outline"
             float4 _MainTex_ST;
             float4 _OutColor;
             float _OutThickness;
-            float _OutFalloff;
             float _OutFade;
 
             // Vertex shader for the outline pass
@@ -92,15 +84,15 @@ Shader "Mert/Outline"
                 float distanceToSurface = length(i.vertex.xyz);
 
                 // Calculate the falloff based on the distance
-                float falloff = saturate((_OutThickness - distanceToSurface) / (_OutFalloff * _OutThickness));
+                //float falloff = saturate((_OutThickness - distanceToSurface) / (_OutThickness));
 
                 // Calculate the outline color with fade
                 fixed4 outlineColor = float4(_OutColor.rgb, _OutColor.a * _OutFade);
 
                 // Apply the falloff to interpolate between the outline color and the base texture color
-                fixed4 finalColor = lerp(outlineColor, col, falloff);
+                //fixed4 finalColor = lerp(outlineColor, col, falloff);
 
-                return finalColor;
+                return outlineColor;
             }
             ENDCG
         }
