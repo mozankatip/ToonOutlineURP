@@ -9,7 +9,7 @@
 * **_OutThickness ("Outline Thickness", Range(0.0, 0.2))**: Range property for the outline thickness.
 * **_OutFade ("Outline Fade", Range(0.0, 1.0))**: Range property for the outline fade.
 * **_ZTest ("ZTest", Float)**: Enum property for the ZTest mode. It allows you to set the draw order of geometry.
-* **Cull ("Cull Mode, Integer)**:  Enum property for to set the culling mode of geometry.
+* **_Cull ("Cull Mode, Integer)**:  Enum property for to set the culling mode of geometry.
 
 ## Code Structure
 
