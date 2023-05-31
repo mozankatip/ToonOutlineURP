@@ -24,12 +24,13 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    m_Ints: []
+    m_Ints:
+    - _Cull: 1
     m_Floats:
     - _OutFade: 1
     - _OutThickness: 0.038
     - _ZTest: 4
     m_Colors:
-    - _Color: {r: 0, g: 0.5756111, b: 1, a: 1}
-    - _OutColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _OutColor: {r: 1, g: 0.30837655, b: 0, a: 1}
   m_BuildTextureStacks: []

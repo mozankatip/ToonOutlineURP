@@ -15,6 +15,7 @@ Shader "mozan/Outline"
        
         [Space(10)]
         [Enum(UnityEngine.Rendering.CompareFunction)] _ZTest("ZTest", Float) = 0   // Enum property for the ZTest
+        [Enum(UnityEngine.Rendering.CullMode)] _Cull ("Cull Mode", Integer) = 1  // Enum property for cull mode
     }
 
     SubShader
@@ -32,7 +33,7 @@ Shader "mozan/Outline"
         {
             Blend SrcAlpha OneMinusSrcAlpha   // Blending mode for the outline pass
             ZWrite Off   // Disable depth writing for the outline pass
-            Cull Front   // Cull front-facing polygons
+            Cull [_Cull]   // Set the cull mode based on the _Cull property
             
             ZTest [_ZTest]   // Set the ZTest mode based on the _ZTest property
 
