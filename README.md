@@ -2,7 +2,12 @@
 ## Introduction
 "Outline Shader” is a Unity URP shader that provides an outline effect around objects. It allows you to specify the outline color, thickness, and fade. This shader has two passes: the outline pass and the texture pass.
 
+
 ![Screenshot 2023-06-01 120154](https://github.com/mozankatip/OutlineShaderURP/assets/47041584/9c28dec0-5794-46df-8d95-15f80906251d)
+
+
+https://github.com/mozankatip/OutlineShaderURP/assets/47041584/6874e531-1328-48d2-9242-2b024c4c6f02
+
 
 ## Properties
 
