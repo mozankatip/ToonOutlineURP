@@ -1,7 +1,8 @@
 # OutlineShaderURP
 ## Introduction
 "Outline Shader” is a Unity URP shader that provides an outline effect around objects. It allows you to specify the outline color, thickness, and fade. This shader has two passes: the outline pass and the texture pass.
-![Screenshot 2023-06-01 111327](https://github.com/mozankatip/OutlineShaderURP/assets/47041584/103ffba1-391d-4062-971d-b00c24a406cc)
+
+![Screenshot 2023-06-01 120154](https://github.com/mozankatip/OutlineShaderURP/assets/47041584/9c28dec0-5794-46df-8d95-15f80906251d)
 
 ## Properties
 
@@ -10,7 +11,7 @@
 * **_OutColor**: It is for adjusting outline color.
 * **_OutThickness**: Range property for the outline thickness.
 * **_OutFade**: The outline fade property controls transparency of outline.
-* **_ZTest)**: Enum property for the ZTest mode. It allows you to set the draw order of geometry.
+* **_ZTest**: Enum property for the ZTest mode. It allows you to set the draw order of geometry.
 * **_Cull**:  Enum property for to set the culling mode of geometry.
 
 ![Screenshot 2023-06-01 110805](https://github.com/mozankatip/OutlineShaderURP/assets/47041584/bfb152da-ab8b-472c-98ca-6915fb1fc82c)
