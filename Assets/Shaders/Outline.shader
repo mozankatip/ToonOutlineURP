@@ -2,31 +2,31 @@ Shader "mozan/Outline"
 {
     Properties
     {
-        _MainTex ("Texture", 2D) = "white" {}   // Texture property for the main texture
+        _MainTex ("Texture", 2D) = "white" {} 
         [Space(20)]
 
-        _Color ("Object Color", Color) = (1, 1, 1, 1)   // Color property for the object color
+        _Color ("Object Color", Color) = (1, 1, 1, 1)  
         [Space(20)]
-        _OutColor ("Outline Color", Color) = (0, 0, 0, 1)   // Color property for the outline color
+        _OutColor ("Outline Color", Color) = (0, 0, 0, 1)  
        
         [Space(10)]
-        _OutThickness ("Outline Thickness", Range(0.0, 0.2)) = 0.1   // Range property for the outline thickness
-        _OutFade ("Outline Fade", Range(0.0, 1.0)) = 1.0   // Range property for the outline fade
+        _OutThickness ("Outline Thickness", Range(0.0, 0.2)) = 0.1  
+        _OutFade ("Outline Fade", Range(0.0, 1.0)) = 1.0   
        
         [Space(10)]
-        [Enum(UnityEngine.Rendering.CompareFunction)] _ZTest("ZTest", Float) = 0   // Enum property for the ZTest
-        [Enum(UnityEngine.Rendering.CullMode)] _Cull ("Cull Mode", Integer) = 1  // Enum property for cull mode
+        [Enum(UnityEngine.Rendering.CompareFunction)] _ZTest("ZTest", Float) = 0   
+        [Enum(UnityEngine.Rendering.CullMode)] _Cull ("Cull Mode", Integer) = 1 
     }
 
     SubShader
     {
         Tags
         {
-            "RenderPipeline" = "UniversalRenderPipeline"   // Tag specifying the render pipeline
+            "RenderPipeline" = "UniversalRenderPipeline" 
             "Queue" = "Transparent"   // Tag specifying the rendering queue
         }
         
-        // ................OUTLINE PASS.................
+        // OUTLINE PASS
         // This pass is responsible for rendering the outline effect.
 
         Pass
@@ -89,14 +89,14 @@ Shader "mozan/Outline"
             ENDCG
         }
 
-        // ................TEXTURE PASS.................
+        // TEXTURE PASS
         // This pass renders the texture of the object without the outline effect.
 
         Pass
         {
             Tags
             {
-                "LightMode" = "UniversalForward"   // Tag specifying the light mode
+                "LightMode" = "UniversalForward"  // Tag specifying the light mode, and also it is workaround for using multi-pass in URP
             }
 
             Blend One OneMinusSrcAlpha   // Blending mode for the texture pass
