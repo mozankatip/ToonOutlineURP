@@ -1,15 +1,20 @@
 # OutlineShaderURP
 ## Introduction
 "Outline Shader” is a Unity URP shader that provides an outline effect around objects. It allows you to specify the outline color, thickness, and fade. This shader has two passes: the outline pass and the texture pass.
+![Screenshot 2023-06-01 111327](https://github.com/mozankatip/OutlineShaderURP/assets/47041584/103ffba1-391d-4062-971d-b00c24a406cc)
 
 ## Properties
 
-* **_MainTex ("Texture", 2D)**: Texture property for the main texture of the object.
-* **_Color ("Object Color", Color)**: Color property for the object color.
-* **_OutThickness ("Outline Thickness", Range(0.0, 0.2))**: Range property for the outline thickness.
-* **_OutFade ("Outline Fade", Range(0.0, 1.0))**: Range property for the outline fade.
-* **_ZTest ("ZTest", Float)**: Enum property for the ZTest mode. It allows you to set the draw order of geometry.
-* **_Cull ("Cull Mode, Integer)**:  Enum property for to set the culling mode of geometry.
+* **_MainTex**: It controls the main texture of the object.
+* **_Color**: Color property for the object color, especially used for objects don't have texture.
+* **_OutColor**: It is for adjusting outline color.
+* **_OutThickness**: Range property for the outline thickness.
+* **_OutFade**: The outline fade property controls transparency of outline.
+* **_ZTest)**: Enum property for the ZTest mode. It allows you to set the draw order of geometry.
+* **_Cull**:  Enum property for to set the culling mode of geometry.
+
+![Screenshot 2023-06-01 110805](https://github.com/mozankatip/OutlineShaderURP/assets/47041584/bfb152da-ab8b-472c-98ca-6915fb1fc82c)
+
 
 ## Code Structure
 
@@ -35,7 +40,8 @@ You can use “TestScene” to see how the “Outline Shader” is used in actio
 ## Notes
 
 1. The outline effect works best on closed mesh objects. For open or complex meshes, artifacts may occur.
-2. The outline effect may not work correctly with transparent objects or objects with complex material setups.
+2. It may not work correctly with transparent objects or objects with complex material setups.
+3. Now it is working like unlit material, as an improvement I will add toon lighting setup later.
 
 * Unity Version: 2021.3.0
 * Universal Render Pipeline (URP)
