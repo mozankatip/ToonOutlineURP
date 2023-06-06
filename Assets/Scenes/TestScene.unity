@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 4890085278179872738, guid: abdf9218e8e198544a711d4a39c48568,
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 880c562f57148064389ed3baf2f46363,
     type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -251,6 +251,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_EnvPiece_02 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: df4977b440539e04cb41e08f2536a8e3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df4977b440539e04cb41e08f2536a8e3, type: 3}
 --- !u!4 &127223485 stripped
@@ -325,6 +330,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Warehouse (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4df063c44ff93624194f2466d8df59b9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4df063c44ff93624194f2466d8df59b9, type: 3}
@@ -415,6 +425,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_EnvPiece_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 318539e8de983ff42a43182061b800a0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 318539e8de983ff42a43182061b800a0, type: 3}
@@ -609,6 +624,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Terrain
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 58221b82d532a9e47958d2d609651c93,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58221b82d532a9e47958d2d609651c93, type: 3}
 --- !u!4 &346595583 stripped
@@ -699,6 +719,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_EnvPiece_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 318539e8de983ff42a43182061b800a0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 318539e8de983ff42a43182061b800a0, type: 3}
 --- !u!4 &355337093 stripped
@@ -746,7 +771,7 @@ Light:
     m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 0.612
+    m_Strength: 0.432
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2
@@ -794,14 +819,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 410087039}
-  m_LocalRotation: {x: -0.77680546, y: -0.21833639, z: 0.46398854, w: -0.36553684}
+  m_LocalRotation: {x: -0.7262651, y: -0.26142326, z: 0.36447957, w: -0.5209142}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 129.6, y: -298.3, z: 0}
+  m_LocalEulerAnglesHint: {x: 108.7, y: -306.7, z: 0}
 --- !u!114 &410087042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -888,6 +913,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Building_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7b3dd45a4e3a46a439e35385d3082731,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b3dd45a4e3a46a439e35385d3082731, type: 3}
@@ -1039,6 +1069,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Warehouse (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4df063c44ff93624194f2466d8df59b9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4df063c44ff93624194f2466d8df59b9, type: 3}
 --- !u!4 &1530419082 stripped
@@ -1128,6 +1163,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_EnvPiece_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: df4977b440539e04cb41e08f2536a8e3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df4977b440539e04cb41e08f2536a8e3, type: 3}
@@ -1219,6 +1259,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_EnvPiece_02 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: df4977b440539e04cb41e08f2536a8e3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df4977b440539e04cb41e08f2536a8e3, type: 3}
 --- !u!4 &1844492037 stripped
@@ -1293,6 +1338,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Building_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 11f75abdc2a1f914296625b8d1605c82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11f75abdc2a1f914296625b8d1605c82, type: 3}
@@ -1384,6 +1434,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_EnvPiece_01 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 318539e8de983ff42a43182061b800a0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 318539e8de983ff42a43182061b800a0, type: 3}
 --- !u!4 &1961697581 stripped
@@ -1459,6 +1514,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Building_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 11f75abdc2a1f914296625b8d1605c82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11f75abdc2a1f914296625b8d1605c82, type: 3}
 --- !u!4 &2042735961 stripped
@@ -1533,6 +1593,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Building_01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 11f75abdc2a1f914296625b8d1605c82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11f75abdc2a1f914296625b8d1605c82, type: 3}
